@@ -1,0 +1,43 @@
+<%- include("partials/header") %>
+<h1 id="details_h1">username: <%= username %> <span class="gohome"><a href="/"><i class="fas fa-home"></i></a></span></h1>
+
+<div class="row">
+    <div class="col-sm-6">
+        <p id="details_p">
+            Total participating contest no: <%= results.length %>
+        </p>
+    </div>
+    <div class="col-sm-6">
+        <p class="maxrat_p">
+            <span style="margin-left: 5%;color:red;">  max rating: <span id="max_ratings" style="margin-right:0.4%;"></span></span>
+            <span id="max_designation" style="margin-left: 10px;"></span>
+        </p>
+    </div>
+</div>
+
+<table>
+    <tr id="tableHeading">
+        <td>Contest ID</td>
+        <td>Contest Name</td>
+        <td>Rank</td>
+        <td>Designation</td>
+        <td>New Ratings</td>
+    </tr>
+   <% for(var i = results.length-1; i >= 0  ; i--){ %>
+        <tr>
+            <td id="contestId">
+                <a href="" id="contestnamelink1"><%= results[i].contestId %></a>
+            </td>
+            
+                <td id="contestName">
+                    <a href="" id="contestnamelink2"><%= results[i].contestName %></a>
+                </td> 
+             
+            <td id="rank"><%= results[i].rank %></td>
+            <td id="designation"></td>
+            <td id="newRating"><%= results[i].newRating %></td>
+        </tr>
+   <% } %>
+</table>
+<script type="text/javascript" src="/css/details.js"></script>
+<!-- <%- include("partials/footer") %>  -->

@@ -1,0 +1,37 @@
+<%- include("partials/header") %>
+    
+    <h1>Check Your Codeforces Contests </h1>
+       
+    <center>
+        <p class="codeforceLogin">
+            IF you have no codeforce account yet , then Login 
+            <a href="https://codeforces.com/enter"> Here</a>
+        </p>
+    </center>
+    <div class="row">
+        <div class="logo">
+           <a href="https://codeforces.com/"><img src="../pics/download2 copy.png" alt=""></a> 
+        </div>
+    </div>
+    <div class="row searchBox">
+        <div class="col-lg-3 col-md-2 col-1"></div>
+
+        <div class="col-lg-6 col-md-8 col-10">
+            <form action="/api" method="GET"> 
+                <input name="userid" type="text" class="form-control" placeholder="Enter Your user-handel" autocomplete="off">
+                
+                <input type="submit" class="btn btn-danger">
+                
+            </form>    
+        </div>
+        
+        <div class="col-lg-3 col-md-2 col-1"></div>
+    </div>
+   
+       
+        
+        <!-- <p style="margin-top:2%; color:red; font-size:120%;">*You have entered an Invalid User Handel</p> -->
+       
+
+    
+<%- include("partials/footer") %> 
